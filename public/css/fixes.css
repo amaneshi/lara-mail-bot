@@ -1,0 +1,29 @@
+/* recursively remove margin */
+.no-margin-r > * {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.padding-sm {
+    padding: 8px;
+}
+
+/* align center */
+.centered-child{
+    text-align: center;
+}
+
+.table-cell {
+    display:block;
+    height:100%;
+    width:100%;
+}
+
+.inline-form-buttons{
+    display: inline !important;
+    padding: 0 !important;
+}
+

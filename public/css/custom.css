@@ -1,0 +1,27 @@
+.light-green-background {
+    background-color: #c8fbcb;
+    transition: 0.5s;
+}
+
+.light-green-background:hover {
+    background-color: #baedbd;
+    transition: 0.5s;
+}
+
+.fa-green {
+color: #359a39;
+}
+
+.clickable_row{
+    cursor: pointer;
+    transition: 1s;
+}
+
+.clickable_row:hover{
+    background-color: #d9edf7 !important;
+    transition: 1s;
+}
+
+.iframe-message{
+    max-height: 500px;
+}
