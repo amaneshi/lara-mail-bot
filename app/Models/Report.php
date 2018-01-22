@@ -45,7 +45,7 @@ class Report extends Model
     public static function init(Campaign $campaign)
     {
         $report = new Report;
-        $report->report_id = Report::latest()->first()->id + 1;
+        $report->report_id = DB::select("SHOW TABLE STATUS LIKE 'reports'")[0]->Auto_increment;
         $report->campaign()->associate($campaign);
         $report->template()->associate($campaign->template);
         $report->bunch()->associate($campaign->bunch);
@@ -90,6 +90,6 @@ class Report extends Model
 
     public function asPercent($value)
     {
-        return is_int($value) ? '<strong>'.($value / $this->mail_all * 100) . '% <br>(' . $value . ')</strong>' : null;
+        return is_int($value) ? '<strong>' . ($value / $this->mail_all * 100) . '% <br>(' . $value . ')</strong>' : null;
     }
 }
